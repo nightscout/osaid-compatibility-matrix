@@ -17,10 +17,11 @@ import type { Country } from '../types';
  * not yet rolled out), and the YpsoPump's mylife Loop uses the Dexcom G6.
  *
  * Deliberately omitted because Canadian availability could not be verified at
- * review: Tandem Mobi, DANA pumps, the twiist pump, Medtrum, Dexcom ONE+,
- * FreeStyle Libre 2 Plus (standalone) and Medtronic Simplera Sync. Several are
+ * review: Tandem Mobi, DANA pumps, Medtrum, Dexcom ONE+, FreeStyle Libre 2 Plus
+ * (standalone), Medtronic Simplera Sync and the Eversense sensors. Several are
  * Health Canada licensed but not yet sold; add them once a retail channel is
- * confirmed.
+ * confirmed. Deliberately omitted because Sequel sells it only in the US: the
+ * twiist pump.
  */
 export const ca: Country = {
 	code: 'CA',

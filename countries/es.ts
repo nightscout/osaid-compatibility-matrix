@@ -22,8 +22,10 @@ import type { Country } from '../types';
  * Deliberately omitted because Spanish availability could not be verified at
  * review: the DANA pumps (the DANA family is reported as not marketed in Spain
  * and hard to obtain), Tandem Mobi, Accu-Chek Insight, Medtrum Nano, Diaconn
- * G8, EOPatch2, Equil and Medtronic Simplera Sync. Add them once a Spanish
- * retail or distribution channel is confirmed.
+ * G8, EOPatch2, Equil, Medtronic Simplera Sync and the Eversense E3 (the
+ * earlier 180-day sensor the Eversense 365 replaces). Deliberately omitted
+ * because it is not sold outside the US: the twiist pump. Add them once a
+ * Spanish retail or distribution channel is confirmed.
  */
 export const es: Country = {
 	code: 'ES',
@@ -52,7 +54,8 @@ export const es: Country = {
 		{ ref: 'libre2:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the FreeStyle Libre 2, financed by the SNS for type 1 diabetes.', subsidy: ['sns-cgm'] },
 		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the FreeStyle Libre 2 Plus.', subsidy: ['sns-cgm'] },
 		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'The FreeStyle Libre 3 Plus, used standalone and integrated with Omnipod 5 and mylife CamAPS FX.', subsidy: ['sns-cgm'] },
-		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['sns-cgm'] }
+		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['sns-cgm'] },
+		{ ref: 'eversense-365', availability: 'limited', availabilityNote: 'CE-marked in January 2026, with the Spanish launch following the first European patients in Sweden. The sensor is inserted and removed by a trained health professional, so getting one depends on finding a certified clinic.' }
 	],
 
 	officialPosition: {

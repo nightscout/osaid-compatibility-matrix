@@ -8,6 +8,7 @@ const AAPS_CGM = 'https://androidaps.readthedocs.io/en/latest/Getting-Started/Co
 const AAPS_G7 = 'https://androidaps.readthedocs.io/en/latest/CompatibleCgms/DexcomG7.html';
 const AAPS_LIBRE2 = 'https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre2.html';
 const AAPS_LIBRE3 = 'https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Libre3.html';
+const AAPS_EVERSENSE = 'https://androidaps.readthedocs.io/en/latest/CompatibleCgms/Eversense.html';
 
 /**
  * Global CGM catalog. As with pumps, open-source support is a software fact
@@ -176,6 +177,45 @@ export const sensors = [
 			{
 				label: 'Medtronic, Simplera Sync FDA approval',
 				url: 'https://news.medtronic.com/2025-04-18-New-Simplera-Sync-TM-sensor-for-the-MiniMed-TM-780G-System-now-FDA-approved'
+			}
+		]
+	},
+	{
+		id: 'eversense-e3',
+		kind: 'sensor',
+		name: 'Eversense E3',
+		maker: 'Senseonics',
+		blurb:
+			'An implanted continuous glucose monitor. A trained health professional inserts the sensor under the skin of the upper arm for up to 180 days, and a removable rechargeable smart transmitter worn over it reports a glucose value every 5 minutes over Bluetooth and vibrates on the body for alerts.',
+		specs: { Calibration: 'Daily fingerstick (twice daily for the first 21 days)', Wear: '180 days', Connectivity: 'Bluetooth LE', Warmup: '24 hours' },
+		compat: {
+			loop: { status: 'yes', note: 'Native, reads the smart transmitter. Loop 3.14.2 and later.', link: LOOP_CGM },
+			trio: { status: 'partial', note: 'Open beta, on the dev branch only.', link: TRIO_CGM },
+			aaps: { status: 'yes', note: 'Via xDrip+ with the ESEL companion app, or a patched Eversense app.', link: AAPS_EVERSENSE }
+		},
+		sources: [
+			{ label: 'Eversense E3 resources (Senseonics)', url: 'https://www.eversensecgm.com/resources-e3/' },
+			{ label: 'AndroidAPS, Eversense', url: AAPS_EVERSENSE }
+		]
+	},
+	{
+		id: 'eversense-365',
+		kind: 'sensor',
+		name: 'Eversense 365',
+		maker: 'Senseonics',
+		blurb:
+			'An implanted continuous glucose monitor worn for a full year. A trained health professional inserts the sensor under the skin of the upper arm, and a removable rechargeable smart transmitter worn over it reports a glucose value every 5 minutes over Bluetooth and vibrates on the body for alerts. After the first 13 days it needs one fingerstick calibration a week.',
+		specs: { Calibration: 'Weekly fingerstick (daily for the first 13 days)', Wear: '365 days', Connectivity: 'Bluetooth LE', Warmup: '24 hours' },
+		compat: {
+			loop: { status: 'yes', note: 'Native, reads the smart transmitter. Loop 3.14.2 and later.', link: LOOP_CGM },
+			trio: { status: 'partial', note: 'Open beta, on the dev branch only.', link: TRIO_CGM },
+			aaps: { status: 'yes', note: 'Via xDrip+ with the ESEL companion app, or a patched Eversense app.', link: AAPS_EVERSENSE }
+		},
+		sources: [
+			{ label: 'Eversense 365 (Senseonics)', url: 'https://www.eversensecgm.com/eversense-365/' },
+			{
+				label: 'Senseonics, European launch of Eversense 365',
+				url: 'https://www.globenewswire.com/news-release/2026/04/24/3280686/0/en/Senseonics-Announces-European-Launch-of-Eversense-365-The-World-s-First-and-Only-One-Year-CGM-System.html'
 			}
 		]
 	}

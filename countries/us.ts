@@ -21,10 +21,11 @@ import type { Country } from '../types';
  * FreeStyle Libre 2 Plus.
  *
  * Deliberately omitted because the device is not in the global catalog: the Beta
- * Bionics iLet and the twiist pump (both US-cleared) — add a listing once each
- * is added to catalog/. Deliberately omitted because they are not FDA-cleared or
- * sold in the US: the SOOIL DANA pumps (DANA-i, DANA RS, DANA-R) and the Ypsomed
- * YpsoPump.
+ * Bionics iLet (US-cleared) — add a listing once it is added to catalog/.
+ * Deliberately omitted because they are not FDA-cleared or sold in the US: the
+ * SOOIL DANA pumps (DANA-i, DANA RS, DANA-R) and the Ypsomed YpsoPump. The
+ * Eversense E3 is omitted because the Eversense 365 replaced it here in 2024 and
+ * a current US channel for the 180-day sensor could not be verified.
  */
 export const us: Country = {
 	code: 'US',
@@ -42,6 +43,7 @@ export const us: Country = {
 		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Sold by Tandem Diabetes Care running Control-IQ+ with the Dexcom G6 or G7.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
 		{ ref: 'tandem-mobi', availability: 'available', availabilityNote: 'FDA-cleared miniature pump from Tandem running Control-IQ+ with the Dexcom G6 or G7.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
 		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 or Simplera Sync sensor.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
+		{ ref: 'twiist', availability: 'available', availabilityNote: 'FDA-cleared for ages 6 and up and sold nationwide from 2026, dispensed through the pharmacy channel. Runs with the FreeStyle Libre 3 Plus or the Eversense 365.' },
 		{ ref: 'omnipod-eros', availability: 'unavailable', availabilityNote: 'Legacy radio-controlled pods, superseded by Omnipod DASH and Omnipod 5.' },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only. Which model and firmware loops varies, so check the build guide.' },
 
@@ -53,7 +55,8 @@ export const us: Country = {
 		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Abbott’s 15-day sensor, widely dispensed through the pharmacy benefit.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
 		{ ref: 'libre2', availability: 'limited', availabilityNote: 'The US 14-day build, read on Android through Juggluco. Being superseded by the FreeStyle Libre 2 Plus and 3 Plus.' },
 		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
-		{ ref: 'simplera-sync', availability: 'available', availabilityNote: 'FDA-approved disposable all-in-one sensor for the MiniMed 780G.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] }
+		{ ref: 'simplera-sync', availability: 'available', availabilityNote: 'FDA-approved disposable all-in-one sensor for the MiniMed 780G.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
+		{ ref: 'eversense-365', availability: 'limited', availabilityNote: 'FDA-cleared in September 2024 and launched across the US that October. The sensor is inserted and removed by a trained health professional, so getting one depends on finding a certified inserter. Integrates with the twiist pump.' }
 	],
 
 	officialPosition: {
