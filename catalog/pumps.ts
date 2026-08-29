@@ -434,5 +434,34 @@ export const pumps = [
 			aaps: { status: 'yes', note: 'Native Bluetooth driver, firmware 5.3 and later.', link: AAPS_PUMPS }
 		},
 		sources: [{ label: 'AndroidAPS compatible pumps', url: AAPS_PUMPS }]
+	},
+	{
+		id: 'twiist',
+		kind: 'pump',
+		name: 'twiist',
+		maker: 'Sequel Med Tech',
+		form: 'Tubed',
+		blurb:
+			'A small round tubed pump holding 300 units of insulin, weighing under two ounces, that measures the volume of each dose acoustically. It has no screen of its own: an iPhone app drives it, and it is the first automated insulin delivery system that can also be controlled from an Apple Watch.',
+		specs: {
+			Connectivity: 'Bluetooth LE',
+			Controller: 'iPhone app (iOS 18 or later) and Apple Watch',
+			Reservoir: '300 U',
+			Format: 'Tubed',
+			Weight: 'Under 2 oz (about 55 g)',
+			Charging: 'Swappable rechargeable battery (72 h)'
+		},
+		commercialAid: 'twiist Loop',
+		pairsWith: ['libre3-plus', 'eversense-365'],
+		compat: {
+			loop: { status: 'no', note: 'No DIY driver. The pump runs its own commercial build of the Loop algorithm.' },
+			trio: { status: 'no', note: 'No Trio driver.' },
+			aaps: { status: 'no', note: 'No AndroidAPS driver.', link: AAPS_FUTURE }
+		},
+		sources: [
+			{ label: 'twiist (Sequel Med Tech)', url: 'https://www.twiist.com/' },
+			{ label: 'twiist FAQ', url: 'https://www.twiist.com/faq' },
+			{ label: 'twiist Loop, the licensed Tidepool Loop algorithm', url: 'https://www.twiist.com/twiist-loop' }
+		]
 	}
 ] as const satisfies readonly Device[];

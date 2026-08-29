@@ -23,7 +23,9 @@ import type { Country } from '../types';
  *
  * Deliberately omitted because German retail availability could not be verified
  * at review: Tandem Mobi, DANA-R (superseded by the DANA RS / DANA-i), Omnipod
- * Eros, Medtrum Nano, Diaconn G8, EOPatch2, Equil, and Medtronic Simplera Sync.
+ * Eros, Medtrum Nano, Diaconn G8, EOPatch2, Equil, Medtronic Simplera Sync, and
+ * the Eversense E3 (the earlier 180-day sensor the Eversense 365 replaces).
+ * Deliberately omitted because it is not sold outside the US: the twiist pump.
  * Add them once a German distribution channel is confirmed.
  */
 export const de: Country = {
@@ -56,7 +58,8 @@ export const de: Country = {
 		{ ref: 'libre2:eu', availability: 'limited', availabilityNote: 'The European build, which pairs directly. Largely superseded by the Libre 2 Plus.', subsidy: ['gkv-cgm'] },
 		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European build, which pairs directly to the looping apps.', subsidy: ['gkv-cgm'] },
 		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Approved for use with the mylife Loop. Read into DIY systems via Juggluco.', subsidy: ['gkv-cgm'] },
-		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['gkv-cgm'] }
+		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['gkv-cgm'] },
+		{ ref: 'eversense-365', availability: 'limited', availabilityNote: 'CE-marked in January 2026, with the German launch following the first European patients in Sweden. The sensor is inserted and removed by a trained health professional, so getting one depends on finding a certified clinic.' }
 	],
 
 	officialPosition: {
