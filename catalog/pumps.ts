@@ -142,6 +142,8 @@ export const pumps = [
 		name: 'DANA-R',
 		maker: 'SOOIL',
 		form: 'Tubed',
+		image: 'dana-r',
+		imageCredit: 'Image © SOOIL (sooil.com)',
 		blurb:
 			'An earlier tubed pump in the SOOIL DANA family with a 300 unit reservoir and Bluetooth, driven by a native AndroidAPS driver.',
 		specs: { Connectivity: 'Bluetooth', Reservoir: '300 U (3.0 mL)', Format: 'Tubed' },
@@ -367,6 +369,8 @@ export const pumps = [
 		name: 'Medtrum Nano',
 		maker: 'Medtrum',
 		form: 'Tubeless patch',
+		image: 'medtrum-nano',
+		imageCredit: 'Image © Medtrum (medtrum.com)',
 		blurb:
 			'A small tubeless patch pump holding 200 or 300 units of U-100 insulin, controlled over Bluetooth from a phone or a handheld manager, running Medtrum’s TouchCare automated insulin delivery with the Medtrum CGM.',
 		specs: {
@@ -393,6 +397,8 @@ export const pumps = [
 		name: 'Diaconn G8',
 		maker: 'Diaconn',
 		form: 'Tubed',
+		image: 'diaconn-g8',
+		imageCredit: 'Image © G2E (diaconn.com)',
 		blurb:
 			'A tubed pump from Korean manufacturer Diaconn with built-in Bluetooth, driven by a native AndroidAPS driver.',
 		specs: { Connectivity: 'Bluetooth', Format: 'Tubed' },
@@ -409,6 +415,8 @@ export const pumps = [
 		name: 'EOPatch2',
 		maker: 'EOFlow',
 		form: 'Tubeless patch',
+		image: 'eopatch2',
+		imageCredit: 'Image © EOFlow (eoflow.com)',
 		blurb:
 			'A tubeless patch pump from Korean manufacturer EOFlow, worn on the body and controlled over Bluetooth, with a native AndroidAPS driver.',
 		specs: { Connectivity: 'Bluetooth', Format: 'Tubeless patch' },
@@ -425,6 +433,8 @@ export const pumps = [
 		name: 'Equil',
 		maker: 'MicroTech Medical',
 		form: 'Tubeless patch',
+		image: 'equil',
+		imageCredit: 'Image © MicroTech Medical (microtechmd.com)',
 		blurb:
 			'A patch pump from MicroTech Medical controlled over Bluetooth, supported by AndroidAPS from firmware 5.3 with a native driver.',
 		specs: { Connectivity: 'Bluetooth', Format: 'Tubeless patch' },
