@@ -16,7 +16,6 @@ Two sources, two licensing situations:
 | `medtronic-paradigm.webp` | [File:Insulin_pump_Medtronic_Paradigm_754.jpg](https://commons.wikimedia.org/wiki/File:Insulin_pump_Medtronic_Paradigm_754.jpg) | CC BY-SA 3.0 | see file page |
 | `omnipod-eros.webp` | [Wikimedia file](https://commons.wikimedia.org/wiki/File:Jonge-diabetespati%C3%ABnt-met-insulinepomp-op-de-huid-geplakt-1326488205.jpg) | CC BY 3.0 | Guus Herbschleb |
 | `dexcom-g6.webp` | [File:Dexcom_G6_transmitter_(52076618032).jpg](https://commons.wikimedia.org/wiki/File:Dexcom_G6_transmitter_%2852076618032%29.jpg) | CC BY 2.0 | Dennis Schneider |
-| `libre2.webp` | [File:Libre_FreeStyle_2_sensor.jpg](https://commons.wikimedia.org/wiki/File:Libre_FreeStyle_2_sensor.jpg) | CC BY-SA 4.0 | see file page |
 
 CC BY / CC BY-SA require visible credit + a link to the licence. If these are shown
 publicly without an on-page attribution block, add one (or swap for CC0 / first-party
@@ -43,6 +42,7 @@ licensed or first-party assets before any commercial reuse if that matters.
 | `equil.webp` | microtechmd.com | MicroTech Medical |
 | `dexcom-g7.webp` | dexcom.com | Dexcom |
 | `dexcom-one-plus.webp` | dexcom.com | Dexcom |
+| `libre2.webp` | freestyle.abbott | Abbott |
 | `libre2-plus.webp` | freestyle.abbott | Abbott |
 | `libre3-plus.webp` | freestyle.abbott | Abbott |
 | `guardian-4.webp` | medtronic.com | Medtronic |

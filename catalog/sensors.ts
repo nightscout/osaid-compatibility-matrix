@@ -80,7 +80,7 @@ export const sensors = [
 		name: 'Libre 2',
 		maker: 'Abbott',
 		image: 'libre2',
-		imageCredit: 'Image: Wikimedia Commons, CC BY-SA 4.0',
+		imageCredit: 'Image © Abbott (freestyle.abbott)',
 		blurb:
 			'A factory-calibrated glucose sensor worn on the upper arm for 14 days. It streams readings over Bluetooth Low Energy with optional high and low alarms, warms up in 60 minutes, and can also be read by NFC scan.',
 		specs: { Calibration: 'Factory', Wear: '14 days', Connectivity: 'Bluetooth LE + NFC', Warmup: '60 minutes' },
