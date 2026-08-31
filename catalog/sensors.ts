@@ -22,6 +22,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Dexcom G6',
 		maker: 'Dexcom',
+		image: 'dexcom-g6',
+		imageCredit: 'Image: Dennis Schneider, CC BY 2.0, via Wikimedia Commons',
 		blurb:
 			'A real-time continuous glucose monitor worn for up to 10 days that pairs a disposable sensor with a separate reusable Bluetooth transmitter. It is factory calibrated, warms up in 2 hours, and reports a glucose value every 5 minutes.',
 		specs: { Calibration: 'Factory', Wear: '10 days', Connectivity: 'Bluetooth LE', Warmup: '2 hours' },
@@ -39,6 +41,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Dexcom G7',
 		maker: 'Dexcom',
+		image: 'dexcom-g7',
+		imageCredit: 'Image © Dexcom (dexcom.com)',
 		blurb:
 			'A real-time continuous glucose monitor with a single-piece disposable sensor and integrated transmitter, worn for up to 10 days. It is factory calibrated, warms up in 30 minutes, and reports a glucose value every 5 minutes over Bluetooth.',
 		specs: { Calibration: 'Factory', Wear: '10 days', Connectivity: 'Bluetooth LE', Warmup: '30 minutes' },
@@ -56,6 +60,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Dexcom ONE+',
 		maker: 'Dexcom',
+		image: 'dexcom-one-plus',
+		imageCredit: 'Image © Dexcom (dexcom.com)',
 		blurb:
 			'A real-time continuous glucose monitor with a single-piece disposable sensor and integrated transmitter, worn for up to 10 days. It is factory calibrated, warms up in 30 minutes, and streams readings every 5 minutes over Bluetooth.',
 		specs: { Calibration: 'Factory', Wear: '10 days', Connectivity: 'Bluetooth LE', Warmup: '30 minutes' },
@@ -73,6 +79,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Libre 2',
 		maker: 'Abbott',
+		image: 'libre2',
+		imageCredit: 'Image: Wikimedia Commons, CC BY-SA 4.0',
 		blurb:
 			'A factory-calibrated glucose sensor worn on the upper arm for 14 days. It streams readings over Bluetooth Low Energy with optional high and low alarms, warms up in 60 minutes, and can also be read by NFC scan.',
 		specs: { Calibration: 'Factory', Wear: '14 days', Connectivity: 'Bluetooth LE + NFC', Warmup: '60 minutes' },
@@ -103,6 +111,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Libre 2 Plus',
 		maker: 'Abbott',
+		image: 'libre2-plus',
+		imageCredit: 'Image © Abbott (freestyle.abbott)',
 		blurb:
 			'A factory-calibrated glucose sensor worn on the upper arm for 15 days. It streams a reading each minute over Bluetooth Low Energy with optional high and low alarms, warms up in 60 minutes, and can also be read by NFC scan.',
 		specs: { Calibration: 'Factory', Wear: '15 days', Connectivity: 'Bluetooth LE + NFC', Warmup: '60 minutes' },
@@ -131,6 +141,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Libre 3 Plus',
 		maker: 'Abbott',
+		image: 'libre3-plus',
+		imageCredit: 'Image © Abbott (freestyle.abbott)',
 		blurb:
 			'A factory-calibrated, single-piece glucose sensor worn on the upper arm for 15 days. It streams a reading each minute over Bluetooth Low Energy, warms up in 60 minutes, and needs no fingerstick or code entry.',
 		specs: { Calibration: 'Factory', Wear: '15 days', Connectivity: 'Bluetooth LE', Warmup: '60 minutes' },
@@ -149,6 +161,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Guardian 4',
 		maker: 'Medtronic',
+		image: 'guardian-4',
+		imageCredit: 'Image © Medtronic (medtronic.com)',
 		blurb:
 			'A real-time continuous glucose monitor worn for 7 days that pairs a disposable sensor with a reusable Bluetooth transmitter. It is factory calibrated, warms up in 2 hours, and reports readings every 5 minutes to the MiniMed 780G.',
 		specs: { Calibration: 'Factory', Wear: '7 days', Connectivity: 'Bluetooth LE', Warmup: '2 hours' },
@@ -164,6 +178,8 @@ export const sensors = [
 		kind: 'sensor',
 		name: 'Simplera Sync',
 		maker: 'Medtronic',
+		image: 'simplera-sync',
+		imageCredit: 'Image © Medtronic (medtronic.com)',
 		blurb:
 			'A real-time, disposable all-in-one continuous glucose monitor worn for 7 days. It is factory calibrated, warms up in 2 hours, uses a two-step insertion, and reports readings every 5 minutes to the MiniMed 780G.',
 		specs: { Calibration: 'Factory', Wear: '7 days', Connectivity: 'Bluetooth LE', Warmup: '2 hours' },
