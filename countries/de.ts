@@ -5,10 +5,10 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Germany has one of the largest do-it-yourself looping
+ * Reviewed October 2026. Germany has one of the largest do-it-yourself looping
  * communities in the world, anchored by the #wearenotwaiting / AndroidAPS
- * scene, so the loopable DANA pumps and the Roche Accu-Chek Insight are
- * surfaced here. Funding runs through statutory health insurance (gesetzliche
+ * scene, so the loopable DANA pumps and the Roche Accu-Chek Insight (now
+ * being discontinued) are surfaced here. Funding runs through statutory health insurance (gesetzliche
  * Krankenversicherung, GKV): pumps and CGM are Hilfsmittel listed in the
  * Hilfsmittelverzeichnis, approved case by case with the Medizinischer Dienst
  * (MD). Availability and funding move; official-position statements are
@@ -32,33 +32,33 @@ export const de: Country = {
 	code: 'DE',
 	name: 'Germany',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to Germans who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Germany has one of the largest do-it-yourself looping communities anywhere, and funding runs through statutory health insurance, with pumps and CGM listed as Hilfsmittel and approved case by case. Maintained by the community and updated as the landscape moves.',
 
 	listings: [
 		// Pumps
-		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump sold through German diabetes suppliers; pods are a Hilfsmittel.', subsidy: ['gkv-pump'] },
-		{ ref: 'omnipod-5:g6', availability: 'available', availabilityNote: 'Launched with the Dexcom G6 in Germany; pairs with Dexcom, not FreeStyle Libre.', subsidy: ['gkv-pump'] },
-		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Dexcom G7 compatibility rolled out in Germany from 2025.', subsidy: ['gkv-pump'] },
-		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Runs Control-IQ+ with the Dexcom G6 or G7.', subsidy: ['gkv-pump'] },
-		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 sensor.', subsidy: ['gkv-pump'] },
-		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Forms the mylife Loop with the mylife CamAPS FX app and a Dexcom G6, FreeStyle Libre 3 or Libre 3 Plus sensor.', subsidy: ['gkv-pump'] },
-		{ ref: 'dana-i', availability: 'available', availabilityNote: 'Distributed by IME-DC and German diabetes suppliers on prescription. A reference pump for AndroidAPS and supported by Trio.', subsidy: ['gkv-pump'] },
-		{ ref: 'dana-rs', availability: 'limited', availabilityNote: 'The earlier DANA model distributed by IME-DC, largely succeeded by the DANA-i. A native AndroidAPS driver pump.', subsidy: ['gkv-pump'] },
-		{ ref: 'accu-chek-insight', availability: 'available', availabilityNote: 'Tubed pump from Roche, a German manufacturer, with a native AndroidAPS Bluetooth driver.', subsidy: ['gkv-pump'] },
-		{ ref: 'accu-chek-combo', availability: 'limited', availabilityNote: 'Earlier Roche pump, largely superseded by the Accu-Chek Insight; driven by AndroidAPS combov2.', subsidy: ['gkv-pump'] },
+		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump sold through German diabetes suppliers; pods are a Hilfsmittel.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'omnipod-5:g6', availability: 'available', availabilityNote: 'Launched with the Dexcom G6 in Germany; pairs with Dexcom, not FreeStyle Libre.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Dexcom G7 compatibility rolled out in Germany from 2025.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Runs Control-IQ+ with the Dexcom G6 or G7. Tandem plans to add FreeStyle Libre 3 Plus pairing in Germany later in 2026.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 sensor.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Forms the mylife Loop with the mylife CamAPS FX app and a Dexcom G6, FreeStyle Libre 3 or Libre 3 Plus sensor.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'dana-i', availability: 'available', availabilityNote: 'Distributed by IME-DC and German diabetes suppliers on prescription. A reference pump for AndroidAPS and supported by Trio.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'dana-rs', availability: 'limited', availabilityNote: 'The earlier DANA model distributed by IME-DC, largely succeeded by the DANA-i. A native AndroidAPS driver pump.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'accu-chek-insight', availability: 'limited', availabilityNote: 'Tubed Roche pump with a native AndroidAPS Bluetooth driver. Roche is discontinuing the pump; check current supply with your supplier.', subsidy: ['gkv-pump', 'pkv'] },
+		{ ref: 'accu-chek-combo', availability: 'limited', availabilityNote: 'Earlier Roche pump, largely superseded by the Accu-Chek Insight; driven by AndroidAPS combov2.', subsidy: ['gkv-pump', 'pkv'] },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 
 		// Sensors
-		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The mainstream Dexcom sensor in Germany, reimbursed as a Hilfsmittel.', subsidy: ['gkv-cgm'] },
-		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out in favour of the Dexcom G7; still used with the mylife Loop.', subsidy: ['gkv-cgm'] },
-		{ ref: 'dexcom-one-plus', availability: 'available', availabilityNote: 'Sold in Germany as the entry Dexcom sensor (Dexcom ONE+).', subsidy: ['gkv-cgm'] },
-		{ ref: 'libre2:eu', availability: 'limited', availabilityNote: 'The European build, which pairs directly. Largely superseded by the Libre 2 Plus.', subsidy: ['gkv-cgm'] },
-		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European build, which pairs directly to the looping apps.', subsidy: ['gkv-cgm'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Approved for use with the mylife Loop. Read into DIY systems via Juggluco.', subsidy: ['gkv-cgm'] },
-		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['gkv-cgm'] },
+		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The mainstream Dexcom sensor in Germany, reimbursed as a Hilfsmittel.', subsidy: ['gkv-cgm', 'pkv'] },
+		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out in favour of the Dexcom G7; still used with the mylife Loop.', subsidy: ['gkv-cgm', 'pkv'] },
+		{ ref: 'dexcom-one-plus', availability: 'available', availabilityNote: 'Sold in Germany as the entry Dexcom sensor (Dexcom ONE+).', subsidy: ['gkv-cgm', 'pkv'] },
+		{ ref: 'libre2:eu', availability: 'limited', availabilityNote: 'The European build, which pairs directly. Largely superseded by the Libre 2 Plus.', subsidy: ['gkv-cgm', 'pkv'] },
+		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European build, which pairs directly to the looping apps.', subsidy: ['gkv-cgm', 'pkv'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Approved for use with the mylife Loop. Read into DIY systems via Juggluco.', subsidy: ['gkv-cgm', 'pkv'] },
+		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['gkv-cgm', 'pkv'] },
 		{ ref: 'eversense-365', availability: 'limited', availabilityNote: 'CE-marked in January 2026, with the German launch following the first European patients in Sweden. The sensor is inserted and removed by a trained health professional, so getting one depends on finding a certified clinic.' }
 	],
 

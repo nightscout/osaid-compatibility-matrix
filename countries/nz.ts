@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. The funding picture changed sharply when Pharmac began
+ * Reviewed October 2026. The funding picture changed sharply when Pharmac began
  * funding CGMs and two commercial AID pumps from 1 October 2024, with staged
  * changes through 2026, so keep lastReviewed honest. Availability and funding
  * move; official-position statements are paraphrased from each body's published
@@ -19,7 +19,7 @@ export const nz: Country = {
 	code: 'NZ',
 	name: 'New Zealand',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to New Zealanders who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Pharmac began funding continuous glucose monitors and two commercial pumps in October 2024, and New Zealand clinicians led the landmark CREATE trial of open-source automated insulin delivery. Maintained by the community and updated as the landscape moves.',
@@ -28,7 +28,7 @@ export const nz: Country = {
 		// Pumps
 		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Funded by Pharmac, supplied by NZMS. Pairs with the Dexcom G7.', subsidy: ['pump', 'consumables'] },
 		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Funded by Pharmac, supplied by Pharmaco. Runs mylife CamAPS FX with the Dexcom G6 or FreeStyle Libre 3 Plus.', subsidy: ['pump', 'consumables'] },
-		{ ref: 'tandem-mobi', availability: 'unavailable', availabilityNote: 'Not yet available in New Zealand. Tandem’s Mobi rollout began in the United States in 2026, with New Zealand supply through NZMS anticipated but not yet confirmed.' },
+		{ ref: 'tandem-mobi', availability: 'unavailable', availabilityNote: 'Not yet available in New Zealand. The Mobi was FDA-cleared in July 2023 and rolled out in the United States from late 2023 to early 2024. New Zealand supply through NZMS is anticipated but not yet confirmed.' },
 		{ ref: 'omnipod-dash', availability: 'limited', availabilityNote: 'Not stocked in New Zealand and not on the Pharmac schedule. A small number of users self-fund pods sourced from Australia.' },
 		{ ref: 'minimed-780g', availability: 'limited', availabilityNote: 'Self-funded, supplied by InterMed, as Medtronic is wound down in favour of the funded pumps. The funded MiniMed 770G left Pharmac funding for new users on 1 January 2025, and its consumables stay funded only until 1 October 2026, by which point existing users transition to the Tandem t:slim X2 or YpsoPump.' },
 		{ ref: 'medtrum-nano', availability: 'available', availabilityNote: 'Self-funded through Intuitive Therapeutics, or funded through Pharmac’s Alternative Brand Allowance for people the two main funded pumps do not suit.', subsidy: ['aba'] },
