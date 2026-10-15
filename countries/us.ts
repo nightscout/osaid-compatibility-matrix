@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. The US is the birthplace of Loop and OpenAPS and has the
+ * Reviewed October 2026. The US is the birthplace of Loop and OpenAPS and has the
  * largest open-source AID community. There is no single national funding scheme;
  * coverage runs through private commercial insurance, Medicare, Medicaid and
  * manufacturer assistance, and turns on a pharmacy-benefit versus durable
@@ -18,7 +18,7 @@ import type { Country } from '../types';
  * the NON-European build, read on Android through Juggluco rather than paired
  * directly, so the bare catalog ids (libre2, libre2-plus) are referenced, not
  * the `:eu` variants. Omnipod 5 pairs with Dexcom G6/G7 and, in the US, the
- * FreeStyle Libre 2 Plus.
+ * FreeStyle Libre 2 Plus and 3 Plus.
  *
  * Deliberately omitted because the device is not in the global catalog: the Beta
  * Bionics iLet (US-cleared) — add a listing once it is added to catalog/.
@@ -26,12 +26,15 @@ import type { Country } from '../types';
  * SOOIL DANA pumps (DANA-i, DANA RS, DANA-R) and the Ypsomed YpsoPump. The
  * Eversense E3 is omitted because the Eversense 365 replaced it here in 2024 and
  * a current US channel for the 180-day sensor could not be verified.
+ * Deliberately omitted because Dexcom does not sell it in the US: the Dexcom
+ * ONE+. Dexcom's lower-cost US sensor is Stelo, sold over the counter to adults
+ * not on insulin, which is not in the catalog.
  */
 export const us: Country = {
 	code: 'US',
 	name: 'United States',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to Americans who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. The US is where Loop and OpenAPS began, and where Tidepool Loop became the first FDA-cleared descendant of a do-it-yourself system. Funding runs through private insurance, Medicare and Medicaid rather than one national scheme. Maintained by the community and updated as the landscape moves.',
@@ -39,8 +42,8 @@ export const us: Country = {
 	listings: [
 		// Pumps
 		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'FDA-cleared tubeless pump from Insulet. Often dispensed through the pharmacy benefit rather than as durable medical equipment.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
-		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Pairs with the Dexcom G6, Dexcom G7 and FreeStyle Libre 2 Plus in the US. The pod version is chosen for the sensor at the pharmacy — a Dexcom-compatible pod does not work with the FreeStyle Libre 2 Plus and vice versa.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
-		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Sold by Tandem Diabetes Care running Control-IQ+ with the Dexcom G6 or G7.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
+		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Pairs with the Dexcom G6, Dexcom G7, FreeStyle Libre 2 Plus and, since June 2026, the FreeStyle Libre 3 Plus in the US. The pod version is chosen for the sensor at the pharmacy. A Dexcom-compatible pod does not work with a FreeStyle Libre sensor and vice versa.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
+		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Sold by Tandem Diabetes Care running Control-IQ+ with the Dexcom G6, Dexcom G7 or, since October 2025, the FreeStyle Libre 3 Plus. Libre 2 Plus pairing ended on 30 June 2026.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
 		{ ref: 'tandem-mobi', availability: 'available', availabilityNote: 'FDA-cleared miniature pump from Tandem running Control-IQ+ with the Dexcom G6 or G7.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
 		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 or Simplera Sync sensor.', subsidy: ['commercial-insurance', 'medicare', 'medicaid', 'manufacturer-assistance'] },
 		{ ref: 'twiist', availability: 'available', availabilityNote: 'FDA-cleared for ages 6 and up and sold nationwide from 2026, dispensed through the pharmacy channel. Runs with the FreeStyle Libre 3 Plus or the Eversense 365.' },
@@ -50,9 +53,8 @@ export const us: Country = {
 		// Sensors
 		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The mainstream Dexcom sensor in the US, dispensed through the pharmacy benefit.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
 		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being discontinued in favour of the Dexcom G7.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
-		{ ref: 'dexcom-one-plus', availability: 'available', availabilityNote: 'A lower-cost Dexcom sensor positioned for people without CGM coverage.' },
-		{ ref: 'libre2-plus', availability: 'available', availabilityNote: 'The US build, read on Android through Juggluco rather than paired directly. Integrates with Omnipod 5.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Abbott’s 15-day sensor, widely dispensed through the pharmacy benefit.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
+		{ ref: 'libre2-plus', availability: 'available', availabilityNote: 'The US build, read on Android through Juggluco rather than paired directly. Integrates with Omnipod 5. The t:slim X2 stopped pairing with it on 30 June 2026.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Abbott’s 15-day sensor, widely dispensed through the pharmacy benefit. Integrates with the t:slim X2, Omnipod 5 and twiist.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
 		{ ref: 'libre2', availability: 'limited', availabilityNote: 'The US 14-day build, read on Android through Juggluco. Being superseded by the FreeStyle Libre 2 Plus and 3 Plus.' },
 		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },
 		{ ref: 'simplera-sync', availability: 'available', availabilityNote: 'FDA-approved disposable all-in-one sensor for the MiniMed 780G.', subsidy: ['commercial-insurance', 'medicare', 'medicaid'] },

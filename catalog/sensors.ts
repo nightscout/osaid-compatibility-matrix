@@ -13,7 +13,7 @@ const AAPS_EVERSENSE = 'https://androidaps.readthedocs.io/en/latest/CompatibleCg
 /**
  * Global CGM catalog. As with pumps, open-source support is a software fact
  * stated once here. The Libre family carries a regional split: the European
- * build can pair directly to the iOS apps, while the build sold in Australia
+ * build can pair directly to the iOS apps, while the build sold elsewhere
  * is read on Android through Juggluco. That difference is modelled as a
  * variant, not a duplicated device.
  */
@@ -24,7 +24,13 @@ export const sensors = [
 		name: 'Dexcom G6',
 		maker: 'Dexcom',
 		image: 'dexcom-g6',
-		imageCredit: 'Image: Dennis Schneider, CC BY 2.0, via Wikimedia Commons',
+		imageCredit: 'Image: Geo Swan, CC0 (public domain), via Wikimedia Commons',
+		imageLicence: {
+			author: 'Geo Swan',
+			licence: 'CC0 1.0',
+			licenceUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+			source: 'https://commons.wikimedia.org/wiki/File:Dexcom_G6_transmitter_(52076618032).jpg'
+		},
 		blurb:
 			'A real-time continuous glucose monitor worn for up to 10 days that pairs a disposable sensor with a separate reusable Bluetooth transmitter. It is factory calibrated, warms up in 2 hours, and reports a glucose value every 5 minutes.',
 		specs: { Calibration: 'Factory', Wear: '10 days', Connectivity: 'Bluetooth LE', Warmup: '2 hours' },
@@ -34,7 +40,7 @@ export const sensors = [
 			aaps: { status: 'yes', note: 'Via BYODA or xDrip+.', link: AAPS_CGM }
 		},
 		sources: [
-			{ label: 'Dexcom Australia, subsidised G6', url: 'https://au.provider.dexcom.com/dexcom-cgm/how-access-subsidised-dexcom-g6-cgm' }
+			{ label: 'NDSS, Dexcom G6 subsidised January 2021', url: 'https://www.ndss.com.au/health-professionals/changes-to-the-ndss-for-health-professionals/18-jan-2021/' }
 		]
 	},
 	{
@@ -85,7 +91,7 @@ export const sensors = [
 		blurb:
 			'A factory-calibrated glucose sensor worn on the upper arm for 14 days. It streams readings over Bluetooth Low Energy with optional high and low alarms, warms up in 60 minutes, and can also be read by NFC scan.',
 		specs: { Calibration: 'Factory', Wear: '14 days', Connectivity: 'Bluetooth LE + NFC', Warmup: '60 minutes' },
-		// Family default = the build sold in Australia. The European build is a variant below.
+		// Family default = the non-European build. The European build is a variant below.
 		compat: {
 			loop: { status: 'no', note: 'Direct pairing is for the European build only.', link: LOOP_CGM },
 			trio: { status: 'no', note: 'Libre 2 Direct pairing is for the European build only.', link: TRIO_CGM },

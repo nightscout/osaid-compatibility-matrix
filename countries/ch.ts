@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Funding in Switzerland runs through mandatory basic
+ * Reviewed October 2026. Funding in Switzerland runs through mandatory basic
  * health insurance (KVG / LAMal): pumps, CGM and consumables are reimbursed
  * when listed on the MiGeL (Mittel- und Gegenständeliste / Liste des moyens et
  * appareils, LiMA), maintained by the Federal Office of Public Health
@@ -19,7 +19,8 @@ import type { Country } from '../types';
  * in May 2025 pairing with the FreeStyle Libre 3 Plus and the Dexcom G6, with
  * the Dexcom G7 due by mid-2026. The FreeStyle Libre sensors sold here are
  * the European direct-pairing build (the `:eu` variants). Roche Diabetes Care
- * is based in Basel, so the Accu-Chek Insight is a local product.
+ * is based in Basel, so the Accu-Chek Insight is a local product, though Roche
+ * is discontinuing it.
  *
  * Deliberately omitted because Swiss availability could not be verified at
  * review: the DANA pumps (DANA-i / DANA RS / DANA-R), the Tandem Mobi, Medtrum
@@ -32,28 +33,28 @@ export const ch: Country = {
 	code: 'CH',
 	name: 'Switzerland',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to people in Switzerland who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Switzerland is home to Ypsomed, maker of the YpsoPump, and to Roche Diabetes Care in Basel, so several of these devices are local products. Funding runs through mandatory basic health insurance, with devices reimbursed once they are listed on the MiGeL / LiMA. Maintained by the community and updated as the landscape moves.',
 
 	listings: [
 		// Pumps
-		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Made by Ypsomed in Burgdorf. Runs mylife CamAPS FX ("mylife Loop"), which reached Switzerland in May 2025 pairing with the FreeStyle Libre 3 Plus and the Dexcom G6; the Dexcom G7 is due by mid-2026.', subsidy: ['migel-pump'] },
-		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ with the Dexcom G6 or G7.', subsidy: ['migel-pump'] },
-		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 sensor, running the SmartGuard algorithm.', subsidy: ['migel-pump'] },
-		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump controlled by its handset, supplied through Swiss diabetes channels.', subsidy: ['migel-pump'] },
-		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Launched in Switzerland from spring 2025 with FreeStyle Libre 2 Plus, Dexcom G6 and Dexcom G7 versions — you choose the sensor pairing.', subsidy: ['migel-pump'] },
-		{ ref: 'accu-chek-insight', availability: 'available', availabilityNote: 'From Roche Diabetes Care in Basel. Also offered as a hybrid closed loop paired with the Diabeloop DBLG1 algorithm.', subsidy: ['migel-pump'] },
+		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Made by Ypsomed in Burgdorf. Runs mylife CamAPS FX ("mylife Loop"), which reached Switzerland in May 2025 pairing with the FreeStyle Libre 3 Plus and the Dexcom G6; the Dexcom G7 is due by mid-2026.', subsidy: ['migel-pump', 'supplementary'] },
+		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ with the Dexcom G6 or G7.', subsidy: ['migel-pump', 'supplementary'] },
+		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic with the Guardian 4 sensor, running the SmartGuard algorithm.', subsidy: ['migel-pump', 'supplementary'] },
+		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump controlled by its handset, supplied through Swiss diabetes channels.', subsidy: ['migel-pump', 'supplementary'] },
+		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Launched in Switzerland from spring 2025 with FreeStyle Libre 2 Plus, Dexcom G6 and Dexcom G7 versions — you choose the sensor pairing.', subsidy: ['migel-pump', 'supplementary'] },
+		{ ref: 'accu-chek-insight', availability: 'limited', availabilityNote: 'From Roche Diabetes Care in Basel, which is discontinuing the pump. Also used as a hybrid closed loop paired with the Diabeloop DBLG1 algorithm; check current supply with Roche.', subsidy: ['migel-pump', 'supplementary'] },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 
 		// Sensors
-		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The current Dexcom sensor in Switzerland, used standalone and with compatible pumps.', subsidy: ['migel-cgm'] },
-		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out in favour of the Dexcom G7. Still the paired sensor for mylife CamAPS FX until the G7 integration arrives.', subsidy: ['migel-cgm'] },
-		{ ref: 'libre2:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the 14-day FreeStyle Libre 2.', subsidy: ['migel-cgm'] },
-		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the 15-day FreeStyle Libre 2 Plus.', subsidy: ['migel-cgm'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Single-piece 15-day sensor. The paired CGM for mylife CamAPS FX in Switzerland.', subsidy: ['migel-cgm'] },
-		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['migel-cgm'] }
+		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The current Dexcom sensor in Switzerland, used standalone and with compatible pumps.', subsidy: ['migel-cgm', 'supplementary'] },
+		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out in favour of the Dexcom G7. Still the paired sensor for mylife CamAPS FX until the G7 integration arrives.', subsidy: ['migel-cgm', 'supplementary'] },
+		{ ref: 'libre2:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the 14-day FreeStyle Libre 2.', subsidy: ['migel-cgm', 'supplementary'] },
+		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the 15-day FreeStyle Libre 2 Plus.', subsidy: ['migel-cgm', 'supplementary'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Single-piece 15-day sensor. The paired CGM for mylife CamAPS FX in Switzerland.', subsidy: ['migel-cgm', 'supplementary'] },
+		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['migel-cgm', 'supplementary'] }
 	],
 
 	officialPosition: {

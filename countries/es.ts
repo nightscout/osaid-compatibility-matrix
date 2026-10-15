@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Funding in Spain runs through the Sistema Nacional de
+ * Reviewed October 2026. Funding in Spain runs through the Sistema Nacional de
  * Salud (SNS): the Ministerio de Sanidad sets the common services portfolio
  * (cartera común de servicios) and the 17 comunidades autónomas administer and
  * roll it out, so coverage, eligibility and the pace of financing automated
@@ -31,7 +31,7 @@ export const es: Country = {
 	code: 'ES',
 	name: 'Spain',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to people in Spain who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Funding runs through the Sistema Nacional de Salud, with the comunidades autónomas administering it, so coverage and the rollout of financed systems vary by region. Maintained by the community and updated as the landscape moves.',
@@ -39,8 +39,8 @@ export const es: Country = {
 	listings: [
 		// Pumps
 		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump sold by Insulet in Spain. Funding for pumps is administered by each comunidad autónoma.', subsidy: ['sns-pump'] },
-		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Pairs with the Dexcom G6 or G7. The pods are sensor-specific, so a Dexcom pod differs from the FreeStyle Libre 2 Plus pod.', subsidy: ['sns-pump'] },
-		{ ref: 'omnipod-5:l2p', availability: 'available', availabilityNote: 'The version that integrates with the FreeStyle Libre 2 Plus sensor; Omnipod 5 also integrates the FreeStyle Libre 3 Plus.', subsidy: ['sns-pump'] },
+		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Launched in Spain in July 2026, pairing with the Dexcom G7. The pods are sensor-specific, so a Dexcom pod differs from the FreeStyle Libre 2 Plus pod.', subsidy: ['sns-pump'] },
+		{ ref: 'omnipod-5:l2p', availability: 'available', availabilityNote: 'The version that integrates with the FreeStyle Libre 2 Plus sensor, launched in Spain in July 2026. As of October 2026, Insulet had released Libre 3 Plus pairing in the US only (June 2026).', subsidy: ['sns-pump'] },
 		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Distributed in Spain by Novalab (Air Liquide Healthcare) and runs Control-IQ with the Dexcom G6 or G7.', subsidy: ['sns-pump'] },
 		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic in Spain with the Guardian 4 sensor.', subsidy: ['sns-pump'] },
 		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX (mylife Loop). Paired in Spain with the Dexcom G6 or FreeStyle Libre 3 Plus.', subsidy: ['sns-pump'] },
@@ -53,7 +53,7 @@ export const es: Country = {
 		{ ref: 'dexcom-one-plus', availability: 'available', availabilityNote: 'A simplified real-time Dexcom CGM available in Spain.' },
 		{ ref: 'libre2:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the FreeStyle Libre 2, financed by the SNS for type 1 diabetes.', subsidy: ['sns-cgm'] },
 		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'The European direct-pairing build of the FreeStyle Libre 2 Plus.', subsidy: ['sns-cgm'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'The FreeStyle Libre 3 Plus, used standalone and integrated with Omnipod 5 and mylife CamAPS FX.', subsidy: ['sns-cgm'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'The FreeStyle Libre 3 Plus, used standalone and integrated with mylife CamAPS FX.', subsidy: ['sns-cgm'] },
 		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['sns-cgm'] },
 		{ ref: 'eversense-365', availability: 'limited', availabilityNote: 'CE-marked in January 2026, with the Spanish launch following the first European patients in Sweden. The sensor is inserted and removed by a trained health professional, so getting one depends on finding a certified clinic.' }
 	],

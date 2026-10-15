@@ -10,16 +10,17 @@ Two sources, two licensing situations:
 
 | File | Source | License | Attribution |
 | --- | --- | --- | --- |
-| `tslim-x2.webp` | [File:Tslim_X2_insulin_pump.jpg](https://commons.wikimedia.org/wiki/File:Tslim_X2_insulin_pump.jpg) | CC0 1.0 (public domain) | none required |
-| `accu-chek-combo.webp` | [File:Accu-Chek_Combo.png](https://commons.wikimedia.org/wiki/File:Accu-Chek_Combo.png) | CC BY-SA 4.0 | see file page |
-| `minimed-780g.webp` | [File:Medtronic_MiniMed_780G_insulinpump.jpg](https://commons.wikimedia.org/wiki/File:Medtronic_MiniMed_780G_insulinpump.jpg) | CC BY-SA 4.0 | see file page |
-| `medtronic-paradigm.webp` | [File:Insulin_pump_Medtronic_Paradigm_754.jpg](https://commons.wikimedia.org/wiki/File:Insulin_pump_Medtronic_Paradigm_754.jpg) | CC BY-SA 3.0 | see file page |
-| `omnipod-eros.webp` | [Wikimedia file](https://commons.wikimedia.org/wiki/File:Jonge-diabetespati%C3%ABnt-met-insulinepomp-op-de-huid-geplakt-1326488205.jpg) | CC BY 3.0 | Guus Herbschleb |
-| `dexcom-g6.webp` | [File:Dexcom_G6_transmitter_(52076618032).jpg](https://commons.wikimedia.org/wiki/File:Dexcom_G6_transmitter_%2852076618032%29.jpg) | CC BY 2.0 | Dennis Schneider |
+| `tslim-x2.webp` | [File:Tslim_X2_insulin_pump.jpg](https://commons.wikimedia.org/wiki/File:Tslim_X2_insulin_pump.jpg) | CC0 1.0 (public domain) | MallardTV (none required) |
+| `accu-chek-combo.webp` | [File:Accu-Chek_Combo.png](https://commons.wikimedia.org/wiki/File:Accu-Chek_Combo.png) | CC BY-SA 4.0 | Tomáš Švec |
+| `minimed-780g.webp` | [File:Medtronic_MiniMed_780G_insulinpump.jpg](https://commons.wikimedia.org/wiki/File:Medtronic_MiniMed_780G_insulinpump.jpg) | CC BY-SA 4.0 | MailariX |
+| `medtronic-paradigm.webp` | [File:Insulin_pump_Medtronic_Paradigm_754.jpg](https://commons.wikimedia.org/wiki/File:Insulin_pump_Medtronic_Paradigm_754.jpg) | CC BY-SA 3.0 | WikiFish1385 |
+| `omnipod-eros.webp` | [Wikimedia file](https://commons.wikimedia.org/wiki/File:Jonge-diabetespatint-met-insulinepomp-op-de-huid-geplakt-1326488205.jpg) | CC BY 3.0 | Guus Herbschleb |
+| `dexcom-g6.webp` | [File:Dexcom_G6_transmitter_(52076618032).jpg](https://commons.wikimedia.org/wiki/File:Dexcom_G6_transmitter_%2852076618032%29.jpg) | CC0 1.0 (public domain) | Geo Swan (none required) |
 
 CC BY / CC BY-SA require visible credit + a link to the licence. If these are shown
 publicly without an on-page attribution block, add one (or swap for CC0 / first-party
-images).
+images). Each of these images carries the same author, licence and file page in its
+catalog entry's `imageLicence`, so a page can render the credit visibly.
 
 ## Manufacturer / distributor sites (copyright retained by the maker)
 

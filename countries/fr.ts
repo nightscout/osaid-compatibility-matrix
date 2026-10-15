@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Reimbursement runs through l'Assurance Maladie via the
+ * Reviewed October 2026. Reimbursement runs through l'Assurance Maladie via the
  * LPPR (Liste des Produits et Prestations Remboursables); device and sensor
  * listings appear in the Journal Officiel as arrêtés, so the subsidy entries
  * cite those. Availability and funding move; official-position statements are
@@ -36,31 +36,31 @@ export const fr: Country = {
 	code: 'FR',
 	name: 'France',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to people in France who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Reimbursement runs through l’Assurance Maladie and the LPPR, and France is unusual in that its regulator has published an explicit warning against do-it-yourself systems while its commercial closed-loop options, including the home-grown Diabeloop, are reimbursed. Maintained by the community and updated as the landscape moves.',
 
 	listings: [
 		// Pumps
-		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump without an integrated CGM, supplied by Insulet. It is not an automated insulin delivery system on its own.', subsidy: ['lppr-pump'] },
-		{ ref: 'omnipod-5:g6', availability: 'available', availabilityNote: 'Reimbursed with the Dexcom G6 since May 2024, in SmartAdjust closed-loop mode.', subsidy: ['lppr-aid'] },
-		{ ref: 'omnipod-5:l2p', availability: 'available', availabilityNote: 'Reimbursement with the FreeStyle Libre 2 Plus took effect in November 2025, with the same indications as the Dexcom G6 pairing.', subsidy: ['lppr-aid'] },
-		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ. Reimbursed with the Dexcom G6 since 2022; reimbursement with the Dexcom G7 was added by an arrêté of February 2026.', subsidy: ['lppr-aid'] },
-		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Runs SmartGuard. Reimbursed with the Guardian 4 sensor since November 2022, and with the Simplera Sync sensor from an arrêté of April 2026.', subsidy: ['lppr-aid'] },
-		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX (the Cambridge algorithm). Reimbursed with the Dexcom G6 since October 2023, and with the FreeStyle Libre 3 from February 2025.', subsidy: ['lppr-aid'] },
+		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Tubeless patch pump without an integrated CGM, supplied by Insulet. It is not an automated insulin delivery system on its own.', subsidy: ['lppr-pump', 'ald'] },
+		{ ref: 'omnipod-5:g6', availability: 'available', availabilityNote: 'Reimbursed with the Dexcom G6 since May 2024, in SmartAdjust closed-loop mode.', subsidy: ['lppr-aid', 'ald'] },
+		{ ref: 'omnipod-5:l2p', availability: 'available', availabilityNote: 'Reimbursement with the FreeStyle Libre 2 Plus took effect in November 2025, with the same indications as the Dexcom G6 pairing.', subsidy: ['lppr-aid', 'ald'] },
+		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ. Reimbursed with the Dexcom G6 since 2022; reimbursement with the Dexcom G7 was added by an arrêté of February 2026.', subsidy: ['lppr-aid', 'ald'] },
+		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Runs SmartGuard. Reimbursed with the Guardian 4 sensor since November 2022, and with the Simplera Sync sensor from an arrêté of April 2026.', subsidy: ['lppr-aid', 'ald'] },
+		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX (the Cambridge algorithm). Reimbursed with the Dexcom G6 since October 2023, and with the FreeStyle Libre 3 from February 2025.', subsidy: ['lppr-aid', 'ald'] },
 		{ ref: 'dana-i', availability: 'limited', availabilityNote: 'Present in France chiefly as a pump partner for the Diabeloop DBLG1 commercial closed-loop, rather than through an independent retail channel for open-source use.' },
-		{ ref: 'accu-chek-insight', availability: 'limited', availabilityNote: 'Standalone sale by Roche ended in 2023, though existing users are supported. It also serves as a pump partner for the Diabeloop DBLG1 system.' },
+		{ ref: 'accu-chek-insight', availability: 'limited', availabilityNote: 'Roche is discontinuing the pump. It has also served as a pump partner for the Diabeloop DBLG1 system.' },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 
 		// Sensors
-		{ ref: 'dexcom-g6', availability: 'available', availabilityNote: 'Reimbursed through the LPPR. Supplied on prescription rather than freely on pharmacy shelves.', subsidy: ['lppr-cgm'] },
-		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'CE marked since 2022 and reimbursed; pairs with the t:slim X2 Control-IQ in France from February 2026.', subsidy: ['lppr-cgm'] },
-		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'European direct-pairing build. Reimbursed through the LPPR and used with Omnipod 5 from November 2025.', subsidy: ['lppr-cgm'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Reimbursed through the LPPR. With the mylife CamAPS FX system, the FreeStyle Libre 3 is reimbursable only when coupled to that pump.', subsidy: ['lppr-cgm'] },
+		{ ref: 'dexcom-g6', availability: 'available', availabilityNote: 'Reimbursed through the LPPR. Supplied on prescription rather than freely on pharmacy shelves.', subsidy: ['lppr-cgm', 'ald'] },
+		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'CE marked since 2022 and reimbursed; pairs with the t:slim X2 Control-IQ in France from February 2026.', subsidy: ['lppr-cgm', 'ald'] },
+		{ ref: 'libre2-plus:eu', availability: 'available', availabilityNote: 'European direct-pairing build. Reimbursed through the LPPR and used with Omnipod 5 from November 2025.', subsidy: ['lppr-cgm', 'ald'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Reimbursed through the LPPR. With the mylife CamAPS FX system, the FreeStyle Libre 3 is reimbursable only when coupled to that pump.', subsidy: ['lppr-cgm', 'ald'] },
 		{ ref: 'libre2:eu', availability: 'limited', availabilityNote: 'European direct-pairing build, being withdrawn from the French market in favour of the FreeStyle Libre 2 Plus.' },
-		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Reimbursed for use with the MiniMed 780G.', subsidy: ['lppr-cgm'] },
-		{ ref: 'simplera-sync', availability: 'available', availabilityNote: 'Disposable all-in-one sensor for the MiniMed 780G, listed on the LPPR by an arrêté of April 2026.', subsidy: ['lppr-cgm'] }
+		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Reimbursed for use with the MiniMed 780G.', subsidy: ['lppr-cgm', 'ald'] },
+		{ ref: 'simplera-sync', availability: 'available', availabilityNote: 'Disposable all-in-one sensor for the MiniMed 780G, listed on the LPPR by an arrêté of April 2026.', subsidy: ['lppr-cgm', 'ald'] }
 	],
 
 	officialPosition: {

@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Funding runs through the NHS rather than insurance: pumps,
+ * Reviewed October 2026. Funding runs through the NHS rather than insurance: pumps,
  * CGM and commercial hybrid closed loop (HCL) are prescribed on the NHS against
  * NICE criteria. NICE TA943 (December 2023) recommended HCL for type 1 diabetes,
  * and NHS England began a five-year national rollout from April 2024; CGM is
@@ -31,7 +31,7 @@ export const gb: Country = {
 	code: 'GB',
 	name: 'United Kingdom',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to people in the UK who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Funding runs through the NHS against NICE criteria, and a five-year national rollout of commercial hybrid closed loop began in 2024, with access and timing differing across England, Scotland, Wales and Northern Ireland. Maintained by the community and updated as the landscape moves.',
@@ -47,7 +47,7 @@ export const gb: Country = {
 		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Forms the mylife Loop with the mylife CamAPS FX app (the Cambridge / CamDiab algorithm) and a Dexcom G6, FreeStyle Libre 3 or Libre 3 Plus sensor. CamAPS FX is available on iOS in the UK as well as Android.', subsidy: ['nhs-hcl'] },
 		{ ref: 'dana-i', availability: 'available', availabilityNote: 'Distributed in the UK by Advanced Therapeutics (UK) Ltd, the exclusive SOOIL distributor, on the NHS. A reference pump for AndroidAPS and supported by Trio.', subsidy: ['nhs-pump'] },
 		{ ref: 'dana-rs', availability: 'limited', availabilityNote: 'The earlier DANA model, largely succeeded by the DANA-i. A native AndroidAPS driver pump.', subsidy: ['nhs-pump'] },
-		{ ref: 'accu-chek-insight', availability: 'limited', availabilityNote: 'Tubed Roche pump with a native AndroidAPS Bluetooth driver. Available to existing users; check current supply with the supplier.', subsidy: ['nhs-pump'] },
+		{ ref: 'accu-chek-insight', availability: 'limited', availabilityNote: 'Tubed Roche pump with a native AndroidAPS Bluetooth driver. Roche stopped marketing it in the UK at the end of 2021 and is discontinuing the pump, so it is not offered to new users.', subsidy: ['nhs-pump'] },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 
 		// Sensors
@@ -104,7 +104,7 @@ export const gb: Country = {
 			covers:
 				'The insulin pump and consumables, prescribed and supplied through the NHS. Commissioning and procurement run separately in England, Scotland, Wales and Northern Ireland.',
 			note: 'Omnipod is supplied as a pharmacy item rather than a durable pump, and do-it-yourself use of any pump falls outside its intended use.',
-			link: 'https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/treatments/insulin-pumps'
+			link: 'https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/technology/insulin-pumps'
 		},
 		{
 			id: 'nhs-hcl',

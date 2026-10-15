@@ -48,6 +48,7 @@ function resolve(listing: CountryListing): ResolvedBase {
 		pairsWith: variant?.pairsWith ?? device.pairsWith,
 		image: device.image,
 		imageCredit: device.imageCredit,
+		imageLicence: device.imageLicence,
 		sources: [...(device.sources ?? []), ...(variant?.sources ?? [])],
 		availability: listing.availability,
 		availabilityNote: listing.availabilityNote

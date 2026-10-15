@@ -8,6 +8,9 @@ const LOOP_DANA = 'https://loopkit.github.io/loopdocs/troubleshooting/dana-faq/'
 const TRIO_PUMP = 'https://triodocs.org/install/build/requirements/devices/pump/';
 const AAPS_PUMPS = 'https://androidaps.readthedocs.io/en/latest/Getting-Started/CompatiblePumps.html';
 const AAPS_DANA = 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/DanaRS-Insulin-Pump.html';
+const AAPS_DANAR = 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/DanaR-Insulin-Pump.html';
+const AAPS_INSIGHT = 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/Accu-Chek-Insight-Pump.html';
+const AAPS_EROS = 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/OmnipodEros.html';
 const AAPS_FUTURE =
 	'https://androidaps.readthedocs.io/en/latest/Getting-Started/Future-possible-Pump-Drivers.html';
 
@@ -42,7 +45,7 @@ export const pumps = [
 				link: 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/OmnipodDASH.html'
 			}
 		},
-		sources: [{ label: 'Omnipod Australia subsidy', url: 'https://www.omnipod.com/en-au/subsidy' }]
+		sources: [{ label: 'Omnipod DASH (Insulet)', url: 'https://www.omnipod.com/what-is-omnipod/omnipod-dash' }]
 	},
 	{
 		id: 'omnipod-eros',
@@ -52,6 +55,12 @@ export const pumps = [
 		form: 'Tubeless patch',
 		image: 'omnipod-eros',
 		imageCredit: 'Image: Guus Herbschleb, CC BY 3.0, via Wikimedia Commons',
+		imageLicence: {
+			author: 'Guus Herbschleb',
+			licence: 'CC BY 3.0',
+			licenceUrl: 'https://creativecommons.org/licenses/by/3.0/',
+			source: 'https://commons.wikimedia.org/wiki/File:Jonge-diabetespatint-met-insulinepomp-op-de-huid-geplakt-1326488205.jpg'
+		},
 		blurb:
 			'A tubeless patch pump that holds up to 200 units of U-100 insulin per pod and delivers for up to 72 hours, plus an 8-hour grace period. It communicates over a 433 MHz radio link that needs a compatible radio bridge — an OrangeLink Pro or EmaLink, as RileyLinks are no longer sold.',
 		specs: { Connectivity: '433 MHz radio (bridge required)', Reservoir: '200 U', Format: 'Tubeless patch', Wear: '72 h + 8 h grace' },
@@ -61,9 +70,13 @@ export const pumps = [
 			aaps: {
 				status: 'partial',
 				note: 'OmnipodEros driver, requires a radio bridge (OrangeLink Pro or EmaLink).',
-				link: 'https://androidaps.readthedocs.io/en/latest/CompatiblePumps/OmnipodEros.html'
+				link: AAPS_EROS
 			}
-		}
+		},
+		sources: [
+			{ label: 'LoopDocs, Omnipod FAQs', url: LOOP_OMNIPOD },
+			{ label: 'AndroidAPS, Omnipod Eros', url: AAPS_EROS }
+		]
 	},
 	{
 		id: 'omnipod-5',
@@ -85,12 +98,21 @@ export const pumps = [
 		variants: [
 			{ id: 'g6', name: 'with Dexcom G6', pairsWith: ['dexcom-g6'] },
 			{ id: 'g7', name: 'with Dexcom G7', pairsWith: ['dexcom-g7'] },
-			{ id: 'l2p', name: 'with Libre 2 Plus', pairsWith: ['libre2-plus'] }
+			{ id: 'l2p', name: 'with Libre 2 Plus', pairsWith: ['libre2-plus'] },
+			{ id: 'l3p', name: 'with Libre 3 Plus', pairsWith: ['libre3-plus'] }
 		],
 		sources: [
 			{ label: 'Omnipod 5 sensor compatibility', url: 'https://www.omnipod.com/current-podders/resources/omnipod-5/device-compatibility' },
 			{ label: 'Omnipod Australia subsidy', url: 'https://www.omnipod.com/en-au/subsidy' },
-			{ label: 'Omnipod 5 open-source support status', url: OMNIPOD_FIVE_OSS }
+			{ label: 'Omnipod 5 open-source support status', url: OMNIPOD_FIVE_OSS },
+			{
+				label: 'Insulet, Omnipod 5 with Libre 3 Plus in the US (June 2026)',
+				url: 'https://www.biospace.com/press-releases/insulet-announces-u-s-rollout-of-enhanced-omnipod-5-algorithm-and-expands-compatibility-with-abbotts-freestyle-libre-3-plus-sensor'
+			},
+			{
+				label: 'Insulet, Omnipod 5 launches in Spain (July 2026)',
+				url: 'https://www.biospace.com/press-releases/insulet-accelerates-global-growth-with-launch-of-omnipod-5-and-omnipod-discover-in-spain-expanding-access-to-tubeless-diabetes-technology'
+			}
 		]
 	},
 	{
@@ -150,9 +172,9 @@ export const pumps = [
 		compat: {
 			loop: { status: 'no', note: 'No Loop driver.' },
 			trio: { status: 'no', note: 'No Trio driver.' },
-			aaps: { status: 'yes', note: 'Native Bluetooth driver.', link: AAPS_DANA }
+			aaps: { status: 'yes', note: 'Native Bluetooth driver.', link: AAPS_DANAR }
 		},
-		sources: [{ label: 'AndroidAPS compatible pumps', url: AAPS_PUMPS }]
+		sources: [{ label: 'AndroidAPS, DANA-R', url: AAPS_DANAR }]
 	},
 	{
 		id: 'accu-chek-combo',
@@ -161,7 +183,13 @@ export const pumps = [
 		maker: 'Roche',
 		form: 'Tubed',
 		image: 'accu-chek-combo',
-		imageCredit: 'Image: Wikimedia Commons, CC BY-SA 4.0',
+		imageCredit: 'Image: Tomáš Švec, CC BY-SA 4.0, via Wikimedia Commons',
+		imageLicence: {
+			author: 'Tomáš Švec',
+			licence: 'CC BY-SA 4.0',
+			licenceUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+			source: 'https://commons.wikimedia.org/wiki/File:Accu-Chek_Combo.png'
+		},
 		blurb: 'A tubed pump with a 315 unit cartridge that is operated by a paired Bluetooth handset.',
 		specs: { Connectivity: 'Bluetooth handset', Reservoir: '315 U (3.15 mL)', Format: 'Tubed' },
 		compat: {
@@ -191,9 +219,20 @@ export const pumps = [
 			aaps: {
 				status: 'yes',
 				note: 'Native Bluetooth driver.',
-				link: 'https://androidaps.readthedocs.io/en/latest/Configuration/Accu-Chek-Insight-Pump.html'
+				link: AAPS_INSIGHT
 			}
-		}
+		},
+		sources: [
+			{ label: 'AndroidAPS, Accu-Chek Insight', url: AAPS_INSIGHT },
+			{
+				label: 'mySugr, Accu-Chek Insight hardware discontinued',
+				url: 'https://www.mysugr.com/support/en/information-about-discontinuation-mysugr-pump-control-june-29th-2026'
+			},
+			{
+				label: 'DRWF, MHRA alert: Insight no longer marketed in the UK',
+				url: 'https://drwf.org.uk/news-and-events/news/medical-alert-issued-after-reports-of-insulin-leakage-from-insulin-pump-cartridges'
+			}
+		]
 	},
 	{
 		id: 'medtronic-paradigm',
@@ -202,7 +241,13 @@ export const pumps = [
 		maker: 'Medtronic',
 		form: 'Tubed',
 		image: 'medtronic-paradigm',
-		imageCredit: 'Image: Wikimedia Commons, CC BY-SA 3.0',
+		imageCredit: 'Image: WikiFish1385, CC BY-SA 3.0, via Wikimedia Commons',
+		imageLicence: {
+			author: 'WikiFish1385',
+			licence: 'CC BY-SA 3.0',
+			licenceUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+			source: 'https://commons.wikimedia.org/wiki/File:Insulin_pump_Medtronic_Paradigm_754.jpg'
+		},
 		blurb:
 			'A tubed pump that communicates over a proprietary sub-GHz radio. The 180 unit reservoir is discontinued, leaving only the 300 unit models in supply.',
 		specs: { Connectivity: '916/868 MHz radio (bridge required)', Reservoir: '300 U (180 U discontinued)', Format: 'Tubed' },
@@ -250,7 +295,13 @@ export const pumps = [
 		maker: 'Tandem',
 		form: 'Tubed',
 		image: 'tslim-x2',
-		imageCredit: 'Image: Wikimedia Commons, CC0 (public domain)',
+		imageCredit: 'Image: MallardTV, CC0 (public domain), via Wikimedia Commons',
+		imageLicence: {
+			author: 'MallardTV',
+			licence: 'CC0 1.0',
+			licenceUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+			source: 'https://commons.wikimedia.org/wiki/File:Tslim_X2_insulin_pump.jpg'
+		},
 		blurb: 'A tubed pump with a touchscreen and a 300 unit cartridge that connects over Bluetooth Low Energy.',
 		specs: {
 			Connectivity: 'Bluetooth LE',
@@ -279,12 +330,19 @@ export const pumps = [
 				id: 'controliq-plus',
 				name: 'Control-IQ+',
 				commercialAid: 'Control-IQ+',
-				pairsWith: ['dexcom-g6', 'dexcom-g7'],
+				pairsWith: ['dexcom-g6', 'dexcom-g7', 'libre3-plus'],
 				blurb:
 					'A tubed touchscreen pump with a 300 unit cartridge running the Control-IQ+ algorithm, which uses a wider approved insulin dose and weight range, adjusts basal insulin and delivers automatic correction boluses.'
 			}
 		],
-		sources: [{ label: 'AMSL Diabetes, t:slim X2 (AU)', url: 'https://www.amsldiabetes.com.au/tslim-x2-insulin-pump/' }]
+		sources: [
+			{ label: 'AMSL Diabetes, t:slim X2 (AU)', url: 'https://www.amsldiabetes.com.au/tslim-x2-insulin-pump/' },
+			{ label: 'Tandem, FreeStyle Libre sensor compatibility', url: 'https://www.tandemdiabetes.com/support/cgm-compatibility/freestyle-libre-cgm' },
+			{
+				label: 'Medical Economics, t:slim X2 with Libre 3 Plus in five countries (July 2026)',
+				url: 'https://www.medicaleconomics.com/view/tandem-s-t-slim-x2-insulin-pump-now-compatible-with-abbott-s-freestyle-libre-3-plus-cgm-in-five-countries'
+			}
+		]
 	},
 	{
 		id: 'tandem-mobi',
@@ -305,7 +363,11 @@ export const pumps = [
 			aaps: { status: 'planned', note: 'Driver in development, not released.', link: AAPS_FUTURE }
 		},
 		sources: [
-			{ label: 'Tandem Mobi', url: 'https://www.tandemdiabetes.com/products/insulin-pumps/tandem-mobi' }
+			{ label: 'Tandem Mobi', url: 'https://www.tandemdiabetes.com/products/insulin-pumps/tandem-mobi' },
+			{
+				label: 'Healio, FDA clears Tandem Mobi (July 2023)',
+				url: 'https://www.healio.com/news/endocrinology/20230711/fda-clears-miniaturesized-insulin-pump-for-children-and-adults-with-diabetes'
+			}
 		]
 	},
 	{
@@ -315,7 +377,13 @@ export const pumps = [
 		maker: 'Medtronic',
 		form: 'Tubed',
 		image: 'minimed-780g',
-		imageCredit: 'Image: Wikimedia Commons, CC BY-SA 4.0',
+		imageCredit: 'Image: MailariX, CC BY-SA 4.0, via Wikimedia Commons',
+		imageLicence: {
+			author: 'MailariX',
+			licence: 'CC BY-SA 4.0',
+			licenceUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+			source: 'https://commons.wikimedia.org/wiki/File:Medtronic_MiniMed_780G_insulinpump.jpg'
+		},
 		blurb:
 			'A tubed pump with a 300 unit reservoir that runs the SmartGuard automated insulin delivery algorithm with automatic correction boluses.',
 		specs: { Connectivity: 'Proprietary RF + Bluetooth', Reservoir: '300 U', Format: 'Tubed' },
@@ -360,7 +428,7 @@ export const pumps = [
 			aaps: { status: 'no', note: 'Third-party encryption blocks a DIY driver.', link: AAPS_FUTURE }
 		},
 		sources: [
-			{ label: 'mylife Loop (AU)', url: 'https://www.mylife-diabetescare.com/en-AU/mylife-loop.html' }
+			{ label: 'mylife Loop (AU)', url: 'https://www.mylife-diabetescare.com/en-AU/get-to-know-myloop' }
 		]
 	},
 	{

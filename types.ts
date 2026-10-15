@@ -55,6 +55,16 @@ export interface Source {
 	url: string;
 }
 
+/** Attribution for a freely licensed image. CC BY and CC BY-SA need visible credit and a licence link. */
+export interface ImageLicence {
+	author: string;
+	/** Short licence name, e.g. 'CC BY-SA 4.0'. */
+	licence: string;
+	licenceUrl: string;
+	/** The image's file page, e.g. on Wikimedia Commons. */
+	source: string;
+}
+
 // Catalog (global)
 
 /** An open-source automated-insulin-delivery system, a matrix column. */
@@ -117,6 +127,8 @@ export interface Device<Ext = unknown> extends DeviceProfile<Ext> {
 	image?: string;
 	/** Source/licence credit for the image, shown on hover. See pump-images/CREDITS.md. */
 	imageCredit?: string;
+	/** Set for freely licensed images. */
+	imageLicence?: ImageLicence;
 }
 
 // Id unions, derived from the catalog data (see catalog/)
@@ -215,6 +227,7 @@ export interface ResolvedDevice<Ext = unknown> {
 	pairsWith?: readonly string[];
 	image?: string;
 	imageCredit?: string;
+	imageLicence?: ImageLicence;
 	sources: Source[];
 	availability: CountryListing['availability'];
 	availabilityNote?: string;

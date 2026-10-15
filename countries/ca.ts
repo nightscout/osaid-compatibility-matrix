@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Funding in Canada is a provincial/territorial patchwork
+ * Reviewed October 2026. Funding in Canada is a provincial/territorial patchwork
  * rather than one national scheme, plus the federal NIHB program and private
  * insurance, so the subsidy entries describe the structure rather than a single
  * payer. Availability and funding move; official-position statements are
@@ -27,26 +27,26 @@ export const ca: Country = {
 	code: 'CA',
 	name: 'Canada',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to Canadians who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Funding is a provincial patchwork rather than one national scheme, and Diabetes Canada is unusual in having published a position that backs clinicians who support people using do-it-yourself systems. Maintained by the community and updated as the landscape moves.',
 
 	listings: [
 		// Pumps
-		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Licensed by Health Canada, sold online through Diabetes Express.', subsidy: ['provincial-pump'] },
-		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Launched 2025. Pairs with the Dexcom G6 or G7 in Canada, not FreeStyle Libre.', subsidy: ['provincial-pump'] },
-		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ with the Dexcom G6 or G7. Control-IQ+ is licensed but not yet rolled out here.', subsidy: ['provincial-pump'] },
-		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX with the Dexcom G6 (mylife Loop, approved November 2024).', subsidy: ['provincial-pump'] },
-		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic Canada with the Guardian 4 sensor.', subsidy: ['provincial-pump'] },
+		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Licensed by Health Canada, sold online through Diabetes Express.', subsidy: ['provincial-pump', 'private'] },
+		{ ref: 'omnipod-5:g7', availability: 'available', availabilityNote: 'Launched 2025. Pairs with the Dexcom G6 or G7 in Canada, not FreeStyle Libre.', subsidy: ['provincial-pump', 'private'] },
+		{ ref: 'tslim-x2:controliq', availability: 'available', availabilityNote: 'Runs Control-IQ with the Dexcom G6 or G7. Control-IQ+ is licensed but not yet rolled out here.', subsidy: ['provincial-pump', 'private'] },
+		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX with the Dexcom G6 (mylife Loop, approved November 2024).', subsidy: ['provincial-pump', 'private'] },
+		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic Canada with the Guardian 4 sensor.', subsidy: ['provincial-pump', 'private'] },
 		{ ref: 'medtronic-paradigm:fw-old', availability: 'limited', availabilityNote: 'Out of warranty, second-hand units only.' },
 
 		// Sensors
-		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The mainstream Dexcom sensor in Canada, sold through pharmacies.', subsidy: ['provincial-cgm'] },
-		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out through 2026 in favour of the Dexcom G7.', subsidy: ['provincial-cgm'] },
-		{ ref: 'libre2', availability: 'available', availabilityNote: 'The 14-day FreeStyle Libre 2, widely covered.', subsidy: ['provincial-cgm'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Covered across Canada since January 2026.', subsidy: ['provincial-cgm'] },
-		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['provincial-cgm'] }
+		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'The mainstream Dexcom sensor in Canada, sold through pharmacies.', subsidy: ['provincial-cgm', 'nihb', 'private'] },
+		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out through 2026 in favour of the Dexcom G7.', subsidy: ['provincial-cgm', 'nihb', 'private'] },
+		{ ref: 'libre2', availability: 'available', availabilityNote: 'The 14-day FreeStyle Libre 2, widely covered.', subsidy: ['provincial-cgm', 'nihb', 'private'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Covered across Canada since January 2026.', subsidy: ['provincial-cgm', 'nihb', 'private'] },
+		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Used with the MiniMed 780G.', subsidy: ['provincial-cgm', 'nihb', 'private'] }
 	],
 
 	officialPosition: {
@@ -93,7 +93,7 @@ export const ca: Country = {
 			covers:
 				'The pump device and consumables, through programs such as Ontario’s Assistive Devices Program, BC PharmaCare and Quebec’s RAMQ.',
 			note: 'Age limits, income tests and cost-sharing differ by province.',
-			link: 'https://www.diabetes.ca/advocacy-policies/your-rights/access-to-medication,-supplies-device'
+			link: 'https://www.diabetes.ca/living-with-diabetes/life-with-diabetes/diabetes-and-diabetes-related-out-of-pocket-costs/access-to-medication-supplies-devices'
 		},
 		{
 			id: 'provincial-cgm',
@@ -103,7 +103,7 @@ export const ca: Country = {
 				'Varies by province. Most cover people on intensive insulin therapy rather than gating on diabetes type, and coverage expanded across most provinces through 2024 to 2026.',
 			covers: 'Dexcom and FreeStyle Libre sensors.',
 			note: 'Coverage, age limits and income tests differ by province.',
-			link: 'https://www.diabetes.ca/advocacy-policies/your-rights/access-to-medication,-supplies-device'
+			link: 'https://www.diabetes.ca/advocacy-and-policy/our-policy-positions/access-to-diabetes-medication-supplies-and-medical-devices'
 		},
 		{
 			id: 'nihb',
