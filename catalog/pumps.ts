@@ -91,8 +91,8 @@ export const pumps = [
 		specs: { Connectivity: 'Bluetooth LE', Reservoir: '85 to 200 U', Format: 'Tubeless patch', Wear: '72 h + 8 h grace' },
 		commercialAid: 'SmartAdjust',
 		compat: {
-			loop: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for late 2026.', link: OMNIPOD_FIVE_OSS },
-			trio: { status: 'planned', note: 'Support is in closed beta, with an open beta anticipated for late 2026.', link: OMNIPOD_FIVE_OSS },
+			loop: { status: 'yes', link: OMNIPOD_FIVE_OSS },
+			trio: { status: 'yes', link: OMNIPOD_FIVE_OSS },
 			aaps: { status: 'planned', note: 'In development, not yet released.', link: AAPS_FUTURE }
 		},
 		variants: [
@@ -104,6 +104,10 @@ export const pumps = [
 		sources: [
 			{ label: 'Omnipod 5 sensor compatibility', url: 'https://www.omnipod.com/current-podders/resources/omnipod-5/device-compatibility' },
 			{ label: 'Omnipod Australia subsidy', url: 'https://www.omnipod.com/en-au/subsidy' },
+			{
+				label: 'NDSS, Omnipod 5 compatible with Libre 3 Plus (October 2026)',
+				url: 'https://www.ndss.com.au/news/omnipod-5-compatible-freestyle-libre-3-plus-sensor/'
+			},
 			{ label: 'Omnipod 5 open-source support status', url: OMNIPOD_FIVE_OSS },
 			{
 				label: 'Insulet, Omnipod 5 with Libre 3 Plus in the US (June 2026)',
