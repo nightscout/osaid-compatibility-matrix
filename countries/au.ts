@@ -5,7 +5,7 @@ import type { Country } from '../types';
  * "deviceId:variantId") and layers on local availability, funding, official
  * stance and community. Compatibility itself is inherited from the catalog.
  *
- * Reviewed June 2026. Availability and funding move, so keep lastReviewed
+ * Reviewed October 2026. Availability and funding move, so keep lastReviewed
  * honest. Official-position statements are paraphrased from each body's
  * published material; confirm wording at the linked source before relying on it.
  */
@@ -13,7 +13,7 @@ export const au: Country = {
 	code: 'AU',
 	name: 'Australia',
 	status: 'live',
-	lastReviewed: 'June 2026',
+	lastReviewed: 'October 2026',
 	maintainer: 'Nocturne community',
 	intro:
 		'What is available to Australians who want to close the loop. The pumps, the sensors, the algorithms they run, the funding, and where the official bodies stand. Maintained by the community and updated as the landscape moves.',
@@ -21,7 +21,8 @@ export const au: Country = {
 	listings: [
 		// Pumps
 		{ ref: 'omnipod-dash', availability: 'available', availabilityNote: 'Pods are an NDSS consumable. The device cost is either an out-of-pocket subscription with Insulet or covered by private hospital cover.', subsidy: ['omnipod'] },
-		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Pods are an NDSS consumable (code 693), supplied in Dexcom G6, Dexcom G7 and Libre 2 Plus versions — you choose which at the pharmacy. The device cost is either an out-of-pocket subscription with Insulet or covered by private hospital cover.', subsidy: ['omnipod'] },
+		{ ref: 'omnipod-5', availability: 'available', availabilityNote: 'Pods are an NDSS consumable, supplied in Dexcom G7 (code 693), Libre 2 Plus (code 692) and, since 1 October 2026, Libre 3 Plus (code 694) versions. The pods you order have to match the CGM you are registered for with the NDSS. The device cost is either an out-of-pocket subscription with Insulet or covered by private hospital cover.', subsidy: ['omnipod'] },
+		{ ref: 'tandem-mobi', availability: 'unavailable', availabilityNote: 'Listed on the ARTG, but a TGA listing does not mean it will be sold here, and its consumables are not on the NDSS Insulin Pump Consumables list.' },
 		{ ref: 'tslim-x2:controliq-plus', availability: 'available', availabilityNote: 'Sold by AMSL Diabetes, consumables on the NDSS.', subsidy: ['pump-insurance', 'consumables', 'manufacturer-programs'] },
 		{ ref: 'minimed-780g', availability: 'available', availabilityNote: 'Sold by Medtronic Australia with the Guardian 4 sensor.', subsidy: ['pump-insurance', 'consumables', 'manufacturer-programs'] },
 		{ ref: 'ypsopump', availability: 'available', availabilityNote: 'Runs mylife CamAPS FX. Also offered under the Insulin Pump Program.', subsidy: ['pump-insurance', 'consumables', 'ipp', 'manufacturer-programs'] },
@@ -34,9 +35,9 @@ export const au: Country = {
 		// Sensors
 		{ ref: 'dexcom-g7', availability: 'available', availabilityNote: 'Subsidised through the NDSS since March 2025.', subsidy: ['cgm'] },
 		{ ref: 'dexcom-one-plus', availability: 'available', availabilityNote: 'Available self-funded. Not on the NDSS type 1 list.' },
-		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Being phased out in favour of the Dexcom G7.', subsidy: ['cgm'] },
+		{ ref: 'dexcom-g6', availability: 'limited', availabilityNote: 'Leaving the Australian market at the end of October 2026. Users move to the Dexcom G7.', subsidy: ['cgm'] },
 		{ ref: 'libre2-plus', availability: 'available', availabilityNote: 'Subsidised through the NDSS since April 2025.', subsidy: ['cgm'] },
-		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Subsidised through the NDSS since December 2025 for mylife YpsoPump users.', subsidy: ['cgm'] },
+		{ ref: 'libre3-plus', availability: 'available', availabilityNote: 'Subsidised through the NDSS for all eligible registrants since 1 October 2026, after launching in December 2025 for mylife YpsoPump users.', subsidy: ['cgm'] },
 		{ ref: 'libre2', availability: 'limited', availabilityNote: 'Leaving the NDSS on 1 July 2026. Users move to the Libre 2 Plus.' },
 		{ ref: 'guardian-4', availability: 'available', availabilityNote: 'Subsidised through the NDSS, used with the MiniMed 780G.', subsidy: ['cgm'] }
 	],
@@ -83,7 +84,7 @@ export const au: Country = {
 			eligibility: 'All people with type 1 diabetes',
 			covers:
 				'Subsidised CGM and flash glucose sensors. Fully subsidised for registrants aged 21 and over with concessional status, otherwise a per-sensor co-payment applies.',
-			note: 'Listed products include Dexcom G7 (March 2025), FreeStyle Libre 2 Plus (April 2025) and FreeStyle Libre 3 Plus (December 2025).',
+			note: 'Listed products include Dexcom G7 (March 2025), FreeStyle Libre 2 Plus (April 2025) and FreeStyle Libre 3 Plus (December 2025, open to all registrants from October 2026).',
 			link: 'https://www.ndss.com.au/about-the-ndss/cgm-access/'
 		},
 		{
